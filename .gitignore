@@ -1,0 +1,6 @@
+notebooks.zip
+python_notebooks
+__pycache__
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/

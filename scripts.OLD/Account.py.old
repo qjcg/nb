@@ -1,0 +1,77 @@
+import pickle
+
+class Transaction:
+    def __init__(self, amount, date, currency="USD", rate=1, description=None):
+        self._amount = amount
+        self._date = date
+        self._currency = currency
+        self._rate = rate
+        self._description = description
+
+    @property
+    def amount(self):
+        return self._amount
+
+    @property
+    def date(self):
+        return self._date
+
+    @property
+    def currency(self):
+        return self._currency
+
+    @property
+    def usd_conversion_rate(self):
+        return self._rate
+
+    @property
+    def usd(self):
+        return self._amount * self._rate
+
+class Account:
+    def __init__(self, number, name, transaction_list=[]):
+        self._number = number
+        self._name = name
+        self._transaction_list = transaction_list
+
+    @property
+    def number(self):
+        return self._number
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, val):
+        assert len(val) >= 4
+        self._name = val
+
+    def __len__(self):
+        return len(self._transaction_list)
+
+    @property
+    def balance(self):
+        return sum([t.usd for t in self._transaction_list])
+
+    @property
+    def all_usd(self):
+        "set comprehension, will be True if length 1 w/ USD only"
+        curs = {t.currency for t in self._transaction_list}
+        return len(curs) == 1 and "USD" in curs
+
+    def apply(self, transaction):
+        assert isinstance(transaction, Transaction)
+        self._transaction_list.append(transaction)
+
+    def save(self):
+        with open(str(self._number) + '.acc', 'wb') as f:
+            pickle.dump(self.__dict__, f)
+
+    def load(self):
+        with open(str(self._number) + '.acc', 'rb') as f:
+            self.__dict__ = pickle.load(f)
+        
+
+    
+

@@ -1,0 +1,13 @@
+And, we're done!
+         5 function calls in 5.004 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    5.004    5.004 {built-in method exec}
+        1    0.000    0.000    5.004    5.004 sleeper.py:1(<module>)
+        1    5.004    5.004    5.004    5.004 {built-in method sleep}
+        1    0.000    0.000    0.000    0.000 {built-in method print}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

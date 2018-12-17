@@ -1,0 +1,2 @@
+def obf():
+    print('OBFUSCATING')
