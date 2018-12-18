@@ -3,17 +3,17 @@
 
 import time
 
-def run_fast():
+def funcA():
     print("Running run_fast")
 
-def run_slow():
+def funcB():
     print("Running run_slow")
     time.sleep(5)
 
-run_fast()
-run_fast()
-run_fast()
+funcA()
+funcA()
+funcA()
 
-run_slow() # PERFORMANCE BOTTLENECK!
+funcB() # PERFORMANCE BOTTLENECK!
 
-run_fast()
+funcA()
