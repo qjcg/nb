@@ -24,6 +24,7 @@ toml = "^0.10.0"
 jupyterhub = "^0.9.4"
 graphviz = "^0.10.1"
 gprof2dot = "^2017.9"
+sklearn = "^0.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.0"
