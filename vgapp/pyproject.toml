@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "vgapp"
+version = "0.3.1"
+description = ""
+authors = ["John Gosset <john@gossetx.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+
+[tool.poetry.scripts]
+vgapp = "vgapp:trade.buy"
+
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

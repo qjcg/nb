@@ -1,0 +1,20 @@
+hello
+Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4
+         16 function calls in 10.009 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   10.009   10.009 {built-in method builtins.exec}
+        1    0.000    0.000   10.009   10.009 sleeper.py:2(<module>)
+        1    0.000    0.000   10.009   10.009 sleeper.py:7(iterate_with_sleep)
+        5   10.009    2.002   10.009    2.002 {built-in method time.sleep}
+        6    0.000    0.000    0.000    0.000 {built-in method builtins.print}
+        1    0.000    0.000    0.000    0.000 sleeper.py:4(say_hello)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+

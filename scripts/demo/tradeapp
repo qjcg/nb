@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+
+from tradelib import sell
+sell()
