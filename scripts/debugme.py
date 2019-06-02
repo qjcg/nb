@@ -32,3 +32,9 @@ def do_iteration():
     for _ in range(10):
         x += 1
     print(f"The final value of x is: {x}")
+    print(random.randrange(1, 101))
+
+
+if __name__ == "__main__":
+    import random
+    do_iteration()

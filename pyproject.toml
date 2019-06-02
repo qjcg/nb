@@ -24,6 +24,8 @@ graphviz = "^0.10.1"
 gprof2dot = "^2017.9"
 sklearn = "^0.0.0"
 beautifulsoup4 = "^4.7"
+icalendar = "^4.0"
+nltk = "^3.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.0"

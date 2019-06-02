@@ -1,12 +1,16 @@
+import pytest
 import stringfuncs
 
 
-TEST_DATA = [
-    {"data": "aaa", "expected": "AAA"},
-    {"data": "aaa aaa aaa", "expected": "AAA AAA AAA"},
-]
+def test_my_upper():
+    assert stringfuncs.my_upper("aaa") == "AAA"
+    assert stringfuncs.my_upper("Hello World & DRW") == "HELLO WORLD & DRW"
 
 
-def test_upper():
-    for t in TEST_DATA:
-        assert stringfuncs.my_upper(t["data"]) == t["expected"]
+def test_my_upper_empty():
+    assert stringfuncs.my_upper("") == ""
+
+
+def test_my_upper_badarg():
+    with pytest.raises(AttributeError):
+        stringfuncs.my_upper(42)
